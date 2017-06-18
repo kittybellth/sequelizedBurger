@@ -1,6 +1,6 @@
-# Eat-Da-Burger
+# Sequelized Eat-Da-Burger
 
-### Purpose
+<!--### Purpose
 To build a single-page-light app.
 
 To utilize handlebars (npm) for rendering the page with database (MySQL). 
@@ -25,4 +25,4 @@ To utilize handlebars (npm) for rendering the page with database (MySQL).
 
 
     `Enjoy Eat-Da-Burger`
-    ![Data Table](/public/assets/img/SS1.png)   
+    ![Data Table](/public/assets/img/SS1.png)   -->
