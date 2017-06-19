@@ -1,9 +1,9 @@
-// var Sequelize = require("sequelize");
+
 // Import the connection to creat the model
 var sequelize = require("../config/connection.js");
 
 module.exports = function(sequelize, DataTypes) {
-  var Burger = sequelize.define("burger", {
+  var Burger = sequelize.define("Burger", {
     burger: {
       type: DataTypes.STRING
     },

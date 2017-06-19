@@ -1,6 +1,5 @@
 <div class="container">
   <div class="row">
-
     {{!--Burgers List--}}
       <div class="col">
         <ol>
@@ -9,7 +8,7 @@
                    <form action="/{{this.id}}?_method=PUT" method="POST">
                       <div class="row">
                         <div class="col">                  
-                          <li>{{this.burger_name}}</li>               
+                          <li>{{this.burger}}</li>               
                         </div>
                         <div class="col">
                           <input type="hidden" name="devoured" value="true"> 
@@ -27,7 +26,7 @@
           <h2>What you wanna eat?</h2>
             <form class="create-update-form" action="/" method="POST">
                <div class="form-group">
-                  <textarea class="form-control" id="exampleTextarea" rows="3" type="text" name="burger_name"></textarea>
+                  <textarea class="form-control" id="exampleTextarea" rows="3" type="text" name="burger"></textarea>
                   <button type="submit button" class="btn btn-danger">Submit</button>
                 </div>
             </form>
@@ -41,7 +40,7 @@
             <div class="row">
               <div class="col">
                 <li>
-                  {{this.burger_name}}  
+                  {{this.burger}}  
                 </li>
               </div>
               <div class="col">
