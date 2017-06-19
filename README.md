@@ -1,6 +1,6 @@
 # Sequelized Eat-Da-Burger
 
-<!--### Purpose
+### Purpose
 To build a single-page-light app.
 
 To utilize handlebars (npm) for rendering the page with database (MySQL). 
@@ -12,9 +12,9 @@ To utilize handlebars (npm) for rendering the page with database (MySQL).
 ### To use this app
 
 **Please click to start**
-[Heroku app](https://nameless-dawn-54839.herokuapp.com/)
+[Heroku app](https://salty-plateau-79246.herokuapp.com/)
 
- ### How this app works
+ <!--### How this app works
 
 * You just input a name of burger that you want to eat
     ![Data Table](/public/assets/img/SS2.png)
