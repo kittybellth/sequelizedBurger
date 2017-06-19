@@ -10,9 +10,9 @@ module.exports = function(app) {
 
     db.Burger.create({
       burger: req.body.burger,
-      devoured: false
-    }).then(function() {
-
+      customer: "Nobody"
+    }).then(function(result) {
+      console.log(result);
       // Redirect client
       res.redirect("/");
     });
@@ -36,7 +36,8 @@ module.exports = function(app) {
   app.put("/:id", function(req, res) {
 
     db.Burger.update({
-      devoured: true
+      devoured: true,
+      customer: req.body.customer
     }, {
       where: {
         id: req.params.id
