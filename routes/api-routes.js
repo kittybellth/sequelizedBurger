@@ -7,15 +7,17 @@ module.exports = function(app) {
 
     // POST route for saving a new burger
   app.post("/", function(req, res) {
-
+    console.log(req.body.burger);
     db.Burger.create({
       burger: req.body.burger,
       customer: "Nobody"
-    }).then(function(result) {
-      console.log(result);
-      // Redirect client
-      res.redirect("/");
-    });
+    }).then((result) => {  
+      console.log("Works Fine");
+      return res.json(true);
+    }).catch(error => {
+      console.log("Aw.... Err");
+      return res.json(false);
+    })
   });
 
   //DELETE route for deleting a burger. 
@@ -34,7 +36,7 @@ module.exports = function(app) {
 
   // PUT route for updating burger.
   app.put("/:id", function(req, res) {
-
+    console.log(req.body.customer);
     db.Burger.update({
       devoured: true,
       customer: req.body.customer
@@ -42,10 +44,13 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function() {
-      // Redirect client
-      res.redirect("/");
-    });
+    }).then((result) => {  
+      console.log("Works fine");
+      return res.json(true);
+    }).catch(error => {
+      console.log("Aw.... Err");
+      return res.json(false);
+    })
   });
 
 };

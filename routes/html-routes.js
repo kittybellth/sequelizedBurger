@@ -7,7 +7,8 @@ module.exports = function(app) {
     
     app.get("/", function(req, res) {
         db.Burger.findAll({
-            raw: true
+            raw: true,
+            order: ['burger']
         }).then(function(dbBurger) {
             var hbsObject = {
                 burgers: dbBurger

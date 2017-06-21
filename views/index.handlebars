@@ -5,18 +5,15 @@
         <ol>
           {{#each burgers}}
             {{#unless this.devoured}}
-                   <form action="/{{this.id}}?_method=PUT" method="POST">
-                      <div class="row">
-                        <div class="col">                  
-                          <li>{{this.burger}}</li>      
-                          {{> burgers/customer}}         
-                        </div>
-                        <div class="col">
-                          <input type="hidden" name="devoured" value="true"> 
-                          <button type="submit button" id="devoured_it" class="btn btn-warning">Devour It!</button>          
-                        </div>
-                      </div>
-                    </form>
+                <div class="row">
+                  <div class="col">                  
+                    <li>{{this.burger}}</li>      
+                    {{> burgers/customer}}         
+                  </div>
+                  <div class="col">
+                    <button type="submit button" class="btn btn-warning devoured_it" value={{this.id}}>Devour It!</button>          
+                  </div>
+                </div>
             {{/unless}}
           {{/each}}
         </ol>       
@@ -25,12 +22,12 @@
       {{!-- Form Group--}}
       <div class="col text-center">   
           <h2>What you wanna eat?</h2>
-            <form class="create-update-form" action="/" method="POST">
+            {{!--<form class="create-update-form" action="/" method="POST">--}}
                <div class="form-group">
                   <textarea class="form-control" id="exampleTextarea" rows="3" type="text" name="burger"></textarea>
-                  <button type="submit button" class="btn btn-danger">Submit</button>
+                  <button type="submit button" class="btn btn-danger" id="add_burger">Submit</button>
                 </div>
-            </form>
+            {{!--</form>--}}
       </div>
 
       {{!--Devoured--}}
