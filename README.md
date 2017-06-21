@@ -34,4 +34,4 @@
 ![Application Screenshot](/public/assets/img/SS1.png)
 
 ***Disclaimer***
-    Most technology including some design are MIT licensed.
+    Most technology including some designs are MIT licensed.
