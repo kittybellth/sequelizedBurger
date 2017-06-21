@@ -38,7 +38,7 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 
-db.sequelize.sync({ force: true, match:/burgers_db$/ }).then(() => {
+db.sequelize.sync().then(() => {
   console.log("Successfully structured model");
   app.listen(PORT);
 }).catch(error => {
